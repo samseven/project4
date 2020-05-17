@@ -52,8 +52,9 @@ body
     width: 325px;
     margin: auto;
 }
-.slider .title h1
+.slider .title .mainhead
 {
+    position: relative;
     color: var(--fcolor);
     text-transform: uppercase;
     border-width: 2px;
@@ -63,8 +64,9 @@ body
     font-weight: bold;
     font-size: 25px;
 }
-.slider .title button
+.slider .title .learn-more
 {
+    position: relative;
     background: transparent;
     outline: none;
     border: 1px solid var(--fcolor);
@@ -154,6 +156,7 @@ header .navbar .nav-list li a:hover{
 }
 .goal-item h3
 {
+    transition: .5s;
     text-align: left;
     margin-bottom:20px;
     font-weight: bold;
@@ -161,8 +164,9 @@ header .navbar .nav-list li a:hover{
 }
 .goal-item p
 {
+    transition: .5s;
     line-height: 1.8;
-font-weight: bolder;
+    font-weight: bolder;
 }
 /* end goals */
 /* start about me */
@@ -175,6 +179,7 @@ font-weight: bolder;
 {
     width: 30%;
     float: left;
+    position: relative;
 }
 .aboutme-image img
 {
@@ -214,13 +219,22 @@ margin-bottom: 15px;
 {
     display: grid;
     grid-template-columns: repeat(2,1fr);
-    grid-column-gap: 20px;
-    grid-row-gap: 15px;
+    grid-column-gap:30px;
+    grid-row-gap: 20px;
+}
+.aboutme-desc-items span{
+    display: block;
+    background-color: #f50;
+    padding: 5px;
+    position: absolute;
+    border-radius: 50%;
+    top: 42px;
+    left:8px
 }
 .aboutme-desc-items .aboutme-desc-item
 {
     position: relative;
-    padding-left: 20px;
+    padding-left: 30px;
 }
 .aboutme-desc-items .aboutme-desc-item h3
 {
@@ -314,6 +328,8 @@ float: left;
     text-align: right;
     display: block;
     background-color:var(--textxolor);
+    transform-origin:center ;
+    transition: .5s ease-in-out;
 }
 .skills-item ul li:nth-child(1) .min-progress,.skills-item ul li:nth-child(3) .min-progress
 {
@@ -574,15 +590,17 @@ border: 0;
 .contactme-form input,.contactme-form textarea{
 padding: 10px;
 margin-bottom: 15px;
+border-radius: 5px;
+background-color: #4B5557;
 }
 .contactme-form label
 {
 padding: 10px 0 10px 0;
 }
-.contactme-form input,.contactme-form  textarea
+.contactme-form  textarea
 {
-border-radius: 5px;
-background-color: #4B5557;
+resize: none;
+
 }
 .contactme-bt
 {
@@ -634,7 +652,8 @@ color:gray
 /* start footer */
 footer{
     height: 100px;
-    background-color: #000;
+    background-color: #4B5557;
+    overflow: hidden;
 }
 .footer-content
 {
@@ -644,12 +663,12 @@ footer{
 {
     padding-top: 4%;
     flex: 1;
-    color: #fff;
+    color: #000;
 }
 .footer-social
 {
     text-align: center;
-    padding-top: 4%;
+    padding-top: 2%;
     flex: 1;
 }
 .footer-social ul
@@ -664,28 +683,46 @@ footer{
 .footer-social ul li a
 {
     display: block;
-    padding: 10px;
+    padding: 20px;
     border-radius: 50%;
+    text-decoration: none;
+    box-sizing: border-box;
+    box-shadow: 0 10px 15px rgba(0,0,0,.3);
+    background: linear-gradient(0deg,#ddd,#fff);
+    transition: .5s;
+}
+.footer-social ul li a:hover{
+    box-shadow: 0 2px 5px rgba(0,0,0,.3);
+}
+.footer-social ul li a .fa
+{
+width: 100%;
+height: 100%;
+display: block;
+border-radius: 50%;
+background: linear-gradient(0deg,#fff,#ddd);
+transition: .5s;
 }
 .footer-social ul li a .icon
 {
-    color: #fff;
+    color: #262626;
+    font-size: 30px;
 }
-.footer-social ul li:nth-child(1)  a
+ .footer-social ul li:hover:nth-child(1)  a .fa
 {
-    background-color: #405DAA;
+    color: #405DAA;
 }
-.footer-social ul li:nth-child(2)  a
+.footer-social ul li:hover:nth-child(2)  a .fa
 {
     
-    background-color:#1DA1F2;
+    color:#1DA1F2;
 }
-.footer-social ul li:nth-child(3)  a
+.footer-social ul li:hover:nth-child(3)  a .fa
 {
-    background-color: #FF0000;
+    color: #FF0000;
 }
-.footer-social ul li:nth-child(4)  a
+.footer-social ul li:hover:nth-child(4)  a .fa
 {
-    background-color: #D6408A;
-}
+    color: #D6408A;
+} 
 /* end footer */
