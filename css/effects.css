@@ -239,7 +239,7 @@ color: rgb(54, 53, 53);
     position: absolute;
     right:0;
     left: 60px;
-    top: 48px;
+    top: 45px;
     width: 0;
     border-width: 15px;
     border-style: solid;
@@ -249,13 +249,13 @@ color: rgb(54, 53, 53);
 {
 
     left: 60px;
-    top: 48px; 
+   
 }
 .aboutme-image .tooltip::after
 {
  
     left: 120px;
-    top: 48px; 
+    
 }
 
 .portofolio-image .image:hover >.tooltip
