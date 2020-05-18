@@ -32,11 +32,32 @@
             <ul class="nav-list">
                 <li><a href="#">home</a></li>
                 <li><a href="#">about</a></li>
-                <li><a href="#">skills</a></li>
+                <li class="dropdown"><a href="#">skills</a>
+                    <ul class="dropdown-menu m1">
+                        <li><a href="#">HTML</a></li>
+                        <li><a href="#">CSS</a></li>
+                        <li><a href="#">Java Script</a></li>
+                        <li><a href="#">React</a></li>
+                    </ul>
+                </li>
                 <li><a href="#">resume</a></li>
-                <li><a href="#">testemonials</a></li>
+                <li class="dropdown"><a href="#">testemonials</a>
+                    <ul class="dropdown-menu m2">
+                        <li><a href="#">CCNA</a></li>
+                        <li><a href="#">MCSA</a></li>
+                        <li><a href="#">Bachlorios</a></li>
+                        <li><a href="#">MCTP</a></li>
+                    </ul>
+                </li>
                 <li><a href="#">portofolio</a></li>
-                <li><a href="#">contact me</a></li>
+                <li class="dropdown"><a href="#">contact me</a>
+                    <ul class="dropdown-menu m3">
+                        <li><a href="#">Mobile</a></li>
+                        <li><a href="#">Email</a></li>
+                        <li><a href="#">WhatsApp</a></li>
+                        <li><a href="#">Facebook</a></li>
+                    </ul>
+                </li>
             </ul>
            </div>
         </nav>
@@ -68,6 +89,7 @@
             <div class="aboutme-items">
                 <div class="aboutme-image">
                     <img src="images/1.jpg" alt="">
+                    <div class="tooltip">شيخ الازهر الشريف</div>
                 </div>
                 <div class="aboutme-desc">
                    <div class="aboutme-desc-content">
@@ -114,7 +136,7 @@
                     <h3 class="skill-item-title">my skills</h3>
                     <p class="skills-desc-p1">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
                     <p class="skills-desc-p2">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
-                    <button class="skills-bt">contact me</button>
+                    <button class="skills-bt overlay-bt">contact me</button>
                 </div>
                 <div class="skills-item mg-top ">
                   <ul>
@@ -146,7 +168,7 @@
            <div class="resume-content">
             <h2 class="resume-title">resume</h2>
             <p class="resume-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
-            <button class="bt-resume">download resume</button>
+            <button class="bt-resume overlay-bt">download resume</button>
            </div>
         </div>
     </section>

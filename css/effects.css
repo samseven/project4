@@ -44,7 +44,7 @@
     border-style: solid;
     border-color:gray transparent  gray transparent;
     height:100%;
-    width: 100%;
+    width: 101%;
     top: -2px;
     left: -1px;
     bottom: 0px;
@@ -58,7 +58,7 @@
     top: 0;
     bottom: 0;
     height: 100%;
-    width: 99%;
+    width: 100%;
     border-width: 0 2px;
     border-style: solid;
     border-color: transparent gray transparent gray;
@@ -123,10 +123,10 @@ color: rgb(54, 53, 53);
     left: 0;
     bottom: 0;
     width: 100%;
-    height: 99.5%;
-    transform: scale3d(1,0,1);
+    height: 90%;
+    transform: scale3d(0,1,1);
     background:rgba(0,0,0,.5);
-    transform-origin: top;
+    transform-origin: right;
     transition: transform 1s ease-in-out;
     border-radius: 5px;
 }
@@ -158,7 +158,7 @@ color: rgb(54, 53, 53);
     padding: 20px;
     border-width: 3px;
     border-style: solid;
-    border-color: #f50  #f50 transparent #f50;
+    border-color: #061539  #061539 transparent #061539;
     border-radius: 50%;
     
 }
@@ -168,7 +168,8 @@ color: rgb(54, 53, 53);
 }
 .aboutme-desc-item .icon:hover ~ span
 {
-   transform: scale(0);
+    animation: animatecircle 2s linear infinite;
+   /* transform: scale(0); */
 }
 @keyframes animate
 {
@@ -183,13 +184,26 @@ color: rgb(54, 53, 53);
         transform: rotate(360deg);
     }
 }
+@keyframes animatecircle
+{
+    0%
+    {
+        transform: rotate(45deg);
+    }
+
+
+    100%
+    {
+        transform: rotate(400deg);
+    }
+}
 .max-progress:hover .min-progress
 {
     transform: scale(0);
 }
-.portofolio-image .tooltip
+.tooltip
 {
-    width: 150px;
+
     padding: 8px 0;
     margin: auto;
     background: transparent;
@@ -198,19 +212,28 @@ color: rgb(54, 53, 53);
     opacity:0 ;    
     visibility: hidden;
     transition: opacity 1s ease-in-out,bottom 1s ease-in-out,visibility 1s ease-in-out;
-    color: #C61671;
-    position: absolute;
-    bottom: -45px;
-    left: 50px;
+    left: 0px;
     font-weight: bold;
     font-size: 25px;
     
+}
+.portofolio-image .tooltip
+{
+    bottom: -45px;
+    width: 150px;  
+    color: #C61671;
+}
+.aboutme-image .tooltip
+{
+    bottom: 0px;
+    width: 300px;
+    color: #2ECC71;
 }
 .portofolio-image .image
 {
    position: relative;
 }
-.portofolio-image .tooltip::after
+ .tooltip::after
 {
     content: "";
     position: absolute;
@@ -221,7 +244,18 @@ color: rgb(54, 53, 53);
     border-width: 15px;
     border-style: solid;
     border-color:#061539 transparent transparent transparent;
+}
+.portofolio-image .tooltip::after
+{
 
+    left: 60px;
+    top: 48px; 
+}
+.aboutme-image .tooltip::after
+{
+ 
+    left: 120px;
+    top: 48px; 
 }
 
 .portofolio-image .image:hover >.tooltip
@@ -229,5 +263,44 @@ color: rgb(54, 53, 53);
     
     opacity:1 ;    
     visibility: visible;
-    bottom: 90px;
+    bottom: 150px;
+}
+.aboutme-image:hover >.tooltip
+{
+    
+    opacity:1 ;    
+    visibility: visible;
+    bottom:400px;
+}
+.overlay-bt
+{
+    position: relative;
+    box-shadow: 0 10px 15px rgba(59, 48, 48, 0.3);
+    transition: .5s;
+}
+.overlay-bt:after
+{
+    content: "";
+    position: absolute;
+    top:0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,.3);
+    transform-origin: center;
+    transition: .5s ease-in-out;
+}
+.overlay-bt:hover:after
+{
+    transform: scale3d(0,1,1);
+}
+.overlay-bt:hover{
+    box-shadow: 0 2px 5px rgba(0,0,0,.3);  
+}
+h2,h3
+{
+    transition:color .5s ease-in-out;
+}
+h2:hover,h3:hover{
+    color: #2ECC71;
 }
