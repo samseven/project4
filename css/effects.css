@@ -219,7 +219,7 @@ color: rgb(54, 53, 53);
 }
 .portofolio-image .tooltip
 {
-    bottom: -45px;
+    bottom: 10px;
     width: 150px;  
     color: #C61671;
 }

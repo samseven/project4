@@ -626,7 +626,12 @@ p.college-desc
 margin-top: 50px;
 display: grid;
 grid-template-columns: repeat(3,1fr);
-grid-gap:20px;
+grid-column-gap: 10px;
+grid-row-gap: 10px;
+}
+.portofolio-image .image
+{
+    height: 180px;
 }
 .portofolio-image .image img{
     width: 100%;
